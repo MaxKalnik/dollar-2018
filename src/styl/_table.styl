@@ -1,555 +1,196 @@
 @import "_variable.styl"
 
+@import "_variable.styl"
+.article-table
+  position: relative
+.table-overall
+  width: 100%
+  border-spacing: 0
+  background: #44cdf9
+  background-image: linear-gradient(90deg, #1C97ED 0%, #43CCF8 100%)
+  border-radius: 5px 5px 0 0
+  font-size 13px
+  color: #475359
+  font-weight 600
 
-.table
-	position: relative
-	width: 650px
-	background: linear-gradient(to right, #009EE8 0%, #00D2F6 100%) 
-	padding-top: 65px
-	padding-left: 2px
-	padding-right: 2px
-	padding-bottom: 2px
-	border-radius: 5px
-	box-shadow: -1px 37px 43px -40px rgba(20, 105, 161, 0.5)
-	&:before
-		content: ''
-		position: absolute
-		top: 12px
-		left: 16px
-		width: 70px
-		height: 54px
-		background-image: url(images/icons/icon_salut.svg)
-		background-repeat: no-repeat
-	&__head
-		position: absolute
-		top: 23px
-		left: 110px
-		font-size: 14px
-		font-weight: bold
-		color: $color_white
-		text-transform: uppercase
-		text-align: center
-				
-.small__table
-	width: 100%
-	border-collapse: collapse
-		
-	tbody		
-		td
-			height: 50px
-			padding-left: 24px
-			box-sizing: border-box
-			border-top: 1px solid #F2FBFE
-			border-bottom: 1px solid #D8EAEF
-			&:first-child
-				color: #7E9EA8
-				
-			&:nth-child(2)
-				font-weight: 600
-				
-			&:nth-child(4)
-				color: #7E9EA8
-					
-		tr
-			background-color: $color_white
-			&:nth-child(odd)
-				background-color: #F0FBFE
+  th
+    font-size: 11px
+    color: #FFFFFF
+    letter-spacing: 0
+    line-height: 16px
+    text-transform uppercase
+    border-right 1px solid rgba(255, 255, 255, .2)
+    vertical-align middle
+    font-weight 600
+    position: relative
+    padding-right: 20px
+    box-sizing: border-box
+    &:first-child
+      padding-right: 0
+    &:last-child
+      border-right none
+    &:nth-child(2)
+      text-align left
+      padding-left: 32px
+    &.head__title--city
+      border-right-width 0
 
+  thead
+    tr
+      background-color rgba(0, 0, 0, 0) !important
+  th, td
+    height: 50px
+    text-align center
+  td:nth-child(1)
+    color: #859BA6
 
-.ontime-rank
-	.table
-		td:nth-child(3)
-			border-right: 1px solid #DDE9EF
-			padding-right: 24px
-
-		td:last-child
-			padding-right: 24px
-			
-		table
-			tbody
-				display: flex
-				flex-direction: row
-				flex-wrap: wrap
-				tr
-					width: 50%
-					td
-						&:first-child
-							width: 5%
-
-						&:nth-child(2)
-							width: 70%
-							font-size: 14px
-
-						&:nth-child(3)
-							width: 25%
-							padding-left: 0
-				.row1
-					order: 1
-				
-				.row2
-					order: 3
-				
-				.row3
-					order: 5
-				
-				.row4
-					order: 7
-				
-				.row5
-					order: 9
-				
-				.row6
-					order: 2
-					background-color: #F0FBFE
-				
-				.row7
-					order: 4
-					background-color: $color_white
-				
-				.row8
-					order: 6
-					background-color: #F0FBFE
-				
-				.row9
-					order: 8
-					background-color: $color_white
-					
-				.row10
-					order: 10
-					background-color: #F0FBFE
-			
-.table--busiest
-	width: 540px
-	background-image: linear-gradient(to right, #FF505B 0%, #FF7B7B 100%)
-	box-shadow: -1px 37px 43px -40px rgba(161, 20, 25, 0.5)
-	&__head
-		left: 98px
-		
-	&:before
-		width: 70px
-		height: 54px
-		background-image: url(images/icons/icon_balls.svg)
-		background-position: center
-		background-repeat: no-repeat
-		
-.small__table--busiest
-	th
-		height: 50px
-		padding-left: 16px
-		padding-right: 16px
-		font-size: 11px
-		text-align: left
-		text-transform: uppercase
-		color: #C56B6B
-		background-color: #FFE8E7
-		border-right: 2px solid #ffffff
-		&:last-child
-			border-right: none
-
-	tbody
-		td
-			height: 50px
-			padding-left: 16px
-			padding-right: 16px
-			text-align: center
-			box-sizing: border-box
-			border-top: 1px solid #FFF7F7
-			border-bottom: 1px solid #F3E8E7
-			&:first-child
-				font-size: 12px
-						
-			&:nth-child(2)
-				width: 33%
-				font-size: 14px
-				line-height: 24px
-				padding-right: 0
-				text-align: left
-				
-			&:nth-child(3)
-				width: 25%
-				font-size: 14px
-				line-height: 24px
-				padding-right: 0
-				color: #173144
-				text-align: left
-				
-			&:nth-child(4)
-				width: 35%
-				font-size: 12px
-				line-height: 22px
-				font-weight: 600
-				color: #173144
-		tr
-			background-color: $color_white
-			&:nth-child(odd)
-				background-color: #FFF7F7
-
-.change-rank__table
-	width: 540px
-	border: 2px solid #CEDFFE
-	border-radius: 5px
-
-.change-table
-	width :100%
-	border-collapse: collapse
-	caption
-		position: relative
-		padding: 16px 16px 16px 64px
-		font-size: 12px
-		line-height: 16px
-		font-weight: 600
-		color: #5F96F8
-		text-align: left
-		text-transform: uppercase
-		&:before
-			content: ''
-			position: absolute
-			left: 16px
-			top: 8px
-			width: 32px
-			height: 32px
-			background-image: url(images/svg/thumbs_up.svg)
-				
-	th
-		height: 52px
-		padding: 0 22px
-		font-size: 12px
-		line-height: 16px
-		font-weight: 700
-		color:  #6381B4
-		text-transform: uppercase
-		background-color: #EEF3FE
-		border-right: 2px solid #ffffff
-		box-sizing: border-box
-		text-align: left
-		&:last-child
-			border-right: none
-			text-align: center
-		
-	tr
-		background-color: $color_white
-		&:nth-child(even)
-			background-color: #F6F9FE
-
-	td
-		padding: 16px 24px 16px 24px
-		&:first-child
-			font-size: 14px
-			line-height: 24px
-			font-weight: 600
-			color: #173144
-		
-		&:nth-child(2)
-			font-size: 12px
-			line-height: 16px
-			font-weight: 600
-			color: #173144
-			text-align: center
-
-.reduction
-	border: 2px solid #FFE5D2
-
-.change-table--reduction
-	caption
-		color: #FF9546
-		&:before
-			background-image: url(images/svg/thumbs_down.svg)
-			
-	th
-		color: #BE8E6A
-		background-color: #FFF6EF
-		
-	tr
-		background-color: $color_white
-		&:nth-child(even)
-			background-color: #FFFBF7
-	
-.table--comparsion-best
-	width: 540px
-	right: 0
-	top: 0
-	.rate-block
-		font-size: 12px
-	&:before
-		width: 46px
-		height: 23px
-		top: 21px
-		background-image: url(images/svg/best.svg)
-	
-	.table__head
-		font-size: 13px
-		line-height: 22px
-		font-weight: bold
-		left: 72px
-				
-.ontime-best-rank
-	.small__table
-		tbody		
-			td
-				&:first-child
-					font-size: 12px
-					line-height: 14px
-
-				&:nth-child(2)
-					width: 60%
-					font-size: 14px
-					line-height: 14px
-					font-weight: 600
-					color: #0A0602
-				&:last-child
-					padding-right: 24px
-									
-			tr
-				background-color: $color_white
-				&:nth-child(even)
-					background-color: #F0FBFE
-
-.table--comparsion-worst
-	width: 540px
-	right: 0
-	top: 364px
-	background: linear-gradient(to right, #FF7D7C 0%, #FF6B89 100%)
-	box-shadow: -1px 37px 43px -40px rgba(161, 20, 25, 0.5) 
-	.rate-block
-		font-size: 12px
-		
-	&:before
-		width: 46px
-		height: 18px
-		top: 23px
-		background-image: url(images/svg/worst.svg)
-		
-	.table__head
-		font-size: 13px
-		line-height: 22px
-		font-weight: bold
-		left: 72px
-
-	.small__table
-		tbody		
-			td
-				border-top: 1px solid #E7E4E6
-				border-bottom: 1px solid #E5EDF0
-				&:first-child
-					font-size: 12px
-					line-height: 14px
-
-				&:nth-child(2)
-					width: 60%
-					font-size: 14px
-					line-height: 14px
-					font-weight: bold
-					color: #0A0602
-									
-			tr
-				background-color: $color_white
-				&:nth-child(even)
-					background-color: #FFF5F4
-				
-		.rate-block
-			&:first-child
-				background-color: #FF696B
-				
-			&:nth-child(2)
-				background-color: #FF6A76
-				
-			&:nth-child(3)
-				background-color: #FF6B7C
-				
-			&:nth-child(4)
-				background-color: #FF6B84
-				
-			&:nth-child(5)
-				background-color: #FCF4F4
-				
-.full-table
-	width: 100%
-	min-width: 600px
-	border-collapse: collapse
-	background-image: linear-gradient(to right, #4293EA 0%, #5DCAF7 100%)
-	border-radius: 5px
-	thead
-		th
-			padding: 16px 20px
-			font-size: 11px
-			line-height: 16px
-			color: $color_white
-			text-align: left
-			text-transform: uppercase
-			border-right: 1px solid rgba(255,255,255,0.2)
-			&:last-child
-				border-right: none
-	
-	tbody
-		tr
-			background-color: #ffffff
-			&:nth-child(odd)
-				background-color: #F6FBFE
-		td
-			padding: 17px 15px 18px 25px
-			border-top: 1px solid #F2FBFE
-			border-bottom: 1px solid #D8EAEF
-			&:first-child
-				text-align: center
-				font-size: 12px
-				line-height: 14px
-				font-weight: 600
-				color: #859BA6
-				
-			&:nth-child(2)
-				width: 33%
-				font-size: 14px
-				line-height: 16px
-				font-weight: 600
-				color: #1C3144
-			
-			&:nth-child(3)
-				text-align: center
-				
-			&:nth-child(4),
-			&:nth-child(5)
-				font-size: 13px
-				line-height: 14px
-				font-weight: 600
-				text-align: center
-				color: #1C3144
-	
-	.rate-block
-		background-color: #67B0F1
-		&:before
-			top: 6px
-
-	.item2
-		background-color: #51ADF2
-
-	.item3
-		background-color: #5DAFF1
-		
-	.item4
-		background-color: #57A6F0
-		
-	.item5
-		background-color: #5DA3F1
-		
-	.item6
-		background-color: #5FA0F1
-		
-	.item7
-		background-color: #629EF1
-		
-	.item8
-		background-color: #679BF1
-		
-	.item9
-		background-color: #6B97F2
-		
-	.item10
-		background-color: #7093F2
-		
-	.item11
-		background-color: #7491F3
-		
-	.item12
-		background-color: #7A8EF3
-		
-	.item13
-		background-color: #7F8BF3
-		
-	.item14
-		background-color: #8389F3
-		
-	.item15
-		background-color: #8885F4
-		
-	.item16
-		background-color: #8D83F4
-		
-	.item17
-		background-color: #917EF3
-		
-	.item18
-		background-color: #977CF4
-		
-	.item19
-		background-color: #9B79F4
-		
-	.item20
-		background-color: #A076F4
-		
-	.item21
-		background-color: #A671F4
-		
-	.item22
-		background-color: #AB6FF5
-		
-	.item23
-		background-color: #B26DF5
-		
-	.item24
-		background-color: #B569F5
-		
-	.item25
-		background-color: #BA67F2
-		
-	.item26
-		background-color: #BB68EE
-		
-	.item27
-		background-color: #BE69E6
-		
-	.item28
-		background-color: #C269DE
-		
-	.item29
-		background-color: #C468D7
-		
-	.item30
-		background-color: #C669D0
-		
-	.item31
-		background-color: #C869C7
-		
-	.item32
-		background-color: #CC69C0
-		
-	.item33
-		background-color: #CE69B9
-		
-	.item34
-		background-color: #D069B2
-		
-	.item35
-		background-color: #D46AAC
-	
-	.item36
-		background-color: #D669A5
-		
-	.item37
-		background-color: #DA699D
-		
-	.item38
-		background-color: #DC6A97
-		
-	.item39
-		background-color: #DD6990
-		
-	.item40
-		background-color: #E16988
-		
-	.item41
-		background-color: #E46A80
-		
-	.item42
-		background-color: #E66A7B
-		
-	.item43
-		background-color: #EA6974
-		
-	.item44
-		background-color: #EC6B6E
-		
-	.item45
-		background-color: #F06964
+    font-weight 600
+  td:nth-child(2)
+    padding-left: 18px
+    box-sizing: border-box
+    text-align left
+    width: 25.3%
+    font-weight lighter
+    font-size 14px
+    b
+      font-weight 600
+      color: #575250
+  td:nth-child(1)
+    width: 4.4%
+  td:nth-child(2)
+    width: 30.1%
+    font-weight: 600
+    color: #475359
+    padding-left: 32px
 
 
+  tr:nth-child(even)
+    background-color #F2F6F8
+  tr:nth-child(odd)
+    background-color #fff
+  td
+    color: #76706D
+    border-bottom: 1px solid #e6eef2
 
+  .countries__stats
+    font-size: 14px
+    line-height: 16px
+    font-weight: 600
+    &:before
+      top: 0
+
+.table_sort
+  cursor: pointer
+
+.overall__hint
+  position: absolute
+  width: 180px
+  left: 52.2%
+  top: -75px
+  padding: 12px
+  font-size: 12px
+  line-height: 18px
+  color: #475359
+  background-color: #ffffff
+  border-radius: 5px
+  box-shadow: 0 20px 40px 0 rgba(0,0,0,0.1)
+  z-index: 7
+  &:before
+    content: ''
+    position: absolute
+    width: 12px
+    height: 12px
+    right: 8px
+    top: 8px
+    background-image: url(images/svg/icon-close-black.svg)
+    background-repeat: no-repeat
+    background-position: center
+    cursor: pointer
+  &:after
+    content: ''
+    position: absolute
+    width: 0
+    height: 0
+    bottom: -8px
+    right: 50%
+    border-left: 6px solid transparent
+    border-right: 6px solid transparent
+    border-top: 8px solid #ffffff
+
+.overall__hint--closed
+  position: absolute
+
+.table_sort
+  position: relative
+  &:before
+    position: absolute
+    right: 20px
+    top: 15px
+    display: block
+    content: ''
+    width: 0
+    height: 0
+    opacity: .7
+    border-style: solid
+    border-width: 0 5px 6px 5px
+    border-color: transparent transparent rgba(255, 255, 255, 1) transparent
+  &:after
+    position: absolute
+    right: 20px
+    top: 25px
+    width: 0
+    height: 0
+    opacity: .7
+    content: ''
+    border-style: solid
+    border-width: 6px 5px 0 5px
+    border-color: rgba(255, 255, 255, 1) transparent transparent transparent
+
+  &.down
+    &:after
+      opacity 1
+  &.top
+    &:before
+      opacity 1
+
+
+.mobile-only-show, .mobile-only-close
+  display: none
+
+.table-title
+  font-weight 600
+  font-size: 34px
+  color: #0A0B0C
+  letter-spacing: 0
+  line-height: 42px
+  padding-bottom: 30px
+  text-align center
+
+.text-box.js-mob-insert
+  border-radius: 5px
+
+.table-overall__wrap
+  position: relative
+
+.table-short
+  .table-overall__wrap
+    height: 1070px
+    overflow hidden
+  .table_show__wrap
+    display: block
+
+
+.table_show__wrap
+  display: none
+  text-align center
+  padding-top: 30px
+  position: relative
+  &:before
+    height: 60px
+    width: 100%
+    position: absolute
+    top: -60px
+    display: block
+
+    background-image: linear-gradient(-180deg, rgba(255,255,255,0.4) 0%, rgba(255,255,255,1) 100%)
+    content: ''

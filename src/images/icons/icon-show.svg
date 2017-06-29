@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="20px" height="20px" viewBox="0 0 20 20" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 44.1 (41455) - http://www.bohemiancoding.com/sketch -->
+    <title>Combined Shape</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <linearGradient x1="50%" y1="0%" x2="50%" y2="100%" id="linearGradient-1">
+            <stop stop-color="#3DC4F7" offset="0%"></stop>
+            <stop stop-color="#229FEF" offset="100%"></stop>
+        </linearGradient>
+    </defs>
+    <g id="Symbols" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Link" transform="translate(-105.000000, -4.000000)" fill="url(#linearGradient-1)">
+            <g id="Group-11">
+                <g>
+                    <path d="M115.000501,4 C109.477492,4 105,8.47726818 105,14 C105,19.5227318 109.477492,24 115.000501,24 C120.523509,24 125,19.5227318 125,14 C125,8.47726818 120.523509,4 115.000501,4 L115.000501,4 Z M113,11.3260716 L115.749339,14 L113,16.6739284 L114.048862,17.5 L117.64738,14 L114.048509,10.5 L113,11.3260716 L113,11.3260716 Z" id="Combined-Shape"></path>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

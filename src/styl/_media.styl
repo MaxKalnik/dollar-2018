@@ -3,29 +3,25 @@
     width: 1360px
 
   .main-pic
-    padding: 32px 60px 32px 60px
+    padding: 32px 45px 32px 45px
     background-position center
-  
+
   .text-box
     padding: 64px 60px 64px 60px
     &--upper
       position: relative
-      padding-left: 315px
-  
+
   .upper-pic
     left: 60px
-    
+
+  .table-hint
+    right: 69px
+
+  .overall__hint
+    left: 53.2%
+
   .show_more
     margin-top: 44px
-  
-  .ontime-rank
-    padding-right: 730px
-  
-  .busiest-rank
-    padding-left: 607px
-  
-  .ontime-best-rank
-    padding-right: 607px
 
 @media (max-width: 1850px)
   .content
@@ -37,7 +33,7 @@
   .main-pic
     padding-left: 60px
     height: 635px
-  
+
   .related-head
     padding: 0 25px
 
@@ -50,103 +46,41 @@
     &:before
       left: 20px
 
-
 @media (min-width: 1019px) and (max-width: 1370px)
-  .ontime-rank
-    padding-right: 0
-    .info-list
-      &__item
-        padding-right: 600px
-        &:nth-child(n+3)
-          padding-right: 0
-          
-    .table
-      width: 565px
-      td
-        padding-left: 14px
-        &:nth-child(2)
-          padding-left: 12px
-          font-size: 14px
-          
-        &:last-child
-          padding-right: 14px
-          
-  .busiest-rank
-    padding-left: 0
-    .info-list
-      &__item
-        margin-left: 600px
-        &:nth-child(n+4)
-          margin-left: 0
-          
+  body
+    color: inherit
 
-  .change-rank
-  &__table
-    th
-      padding-left: 22px
-      &:nth-child(2)
-        padding: 0
-        text-align: center      
-    td
-      &:first-child
-        width: 52%
-
-      &:nth-child(2)
-        width: auto
-          
 
 @media (max-width: 1370px)
   .content
     width: 980px
-  
+
   .article-title
     font-size: 40px
     line-height: 68px
     font-weight: 600
 
-  .article-text__item
-    width: 650px
-    font-size: 24px
-    line-height: 30px
-    font-weight: 300
-    margin-bottom: 42px
-    
-  .article-author
-    font-size: 12px
-    line-height: 16px
-    font-weight: 300
-
   .main-pic
     height: 568px
     background-repeat no-repeat
     background-position right top
-    padding: 32px 40px 45px 45px
+    padding: 32px 25px 45px 25px
 
   .under-title
     margin-bottom: 32px
+    width: 86%
 
-  .ontime-rank         
-    .table
-      width: 565px
-          
-  .change-rank
-    &__table
-      width: 425px
-      
-  .ontime-best-rank
-    padding-right: 377px
-    .table
-      width: 330px
-      &__head
-        text-align: left
-        top: 10px
-      td
-        padding-left: 20px
-        &:first-child
-          padding-left: 16px
-        &:last-child
-          padding-left: 16px
-         
+  .countries__item
+    &:after
+      width: 980px
+      left: -25px
+
+  .overall__hint
+    left: 49.7%
+
+  .table-hint
+    right: 38px
+
   .related-head
     padding: 0 20px
 
@@ -156,9 +90,27 @@
   .related-list .col
     width: 49%
 
+  .text-box
+    padding: 44px 25px 42px 25px
 
-  .text-box.last
-    padding-top: 41px
+  .flight
+    table
+      display: flex
+    tbody
+      width: 100%
+    tr
+      display: flex
+      flex-direction: row
+      justify-content: space-between
+
+  .countries__table
+    th
+      font-size: 11px
+
+  .info-hint
+    right: -10px
+    &:after
+      right: 14px
 
   .bottom-col
     width: 48%
@@ -171,124 +123,212 @@
   .content
     width: auto
     max-width: 740px
-    
-  .article-title
-    font-size: 32px
-    line-height: 38px
-    font-weight: 600
 
-  .article-text__item
-    width: 650px
-    font-size: 24px
-    line-height: 30px
-    font-weight: 300
-    margin-bottom: 12px
-    
-  .article-author
-    font-size: 12px
-    line-height: 16px
-    font-weight: 300
-    
+  .article-title
+    font-size: 31px
+    line-height: 40px
+    font-weight: 600
+    margin-bottom: 24px
+
+  .text-box
+    padding: 32px 25px 32px 25px
+
   .main-pic
     height: 345px
-    padding: 32px 25px 32px 25px
-    background-image url("images/main_pic_768.png")
-    background-image: -webkit-image-set(url(images/main_pic_768.png) 1x, url(images/main_pic_768@2x.png) 2x)
+    padding: 25px
+    background-image url("images/main_pic.png")
     background-position center
+
+  .info-hint
+    right: 260px
+    bottom: 85px
+    top: auto
 
   .top-menu__link
     margin: 0 10px
-    
-  .text-box
-    padding: 44px 25px 44px 25px
-    &--upper
-      display: flex
-      flex-direction: row
-      flex-wrap: wrap
-      justify-content: space-between
-      padding-left: 25px
-      .upper-pic
-        position: static
-        width: 210px
-      
-      .under-title
-        width: 445px
-        margin-bottom: 32px
 
-      .main-text
-        width: 100%
-    
-  .calendar
-    display: flex
-    flex-direction: column
-    padding-left: 0
-    &__img
-      position: static
-      align-self: center
-  
-  .ontime-rank
-    display: flex
-    flex-direction: column
-    padding-right: 0
-    .table
-      position: relative
-      align-self: center
-      width: 650px
-      margin-bottom: 32px
-    .info-list
-      order: 2
-      
-  .busiest-rank
-    display: flex
-    flex-direction: column
-    padding-left: 0
-    .table
-      position: relative
-      align-self: center
-      margin-bottom: 32px
-    .info-list
-      order: 2
-      
-  .change-rank
-    &__table
-      width: 330px   
-    .change-table
-      th
-        padding: 0 10px
-        padding-left: 24px
-        &:nth-child(2)
-          padding-left: 18px
-          text-align: left
-              
-      td
-        &:first-child
-          width: 60%
-          padding-right: 0
-        
-        &:nth-child(2)
-          width: auto
-          
-  .ontime-best-rank
-    display: flex
-    flex-direction: row
-    justify-content: space-between
-    flex-wrap: wrap
-    padding-right: 0
-    .table
-      top: 0
-      position: relative
-      width: 330px
-      margin-bottom: 32px
-    .info-list
-      order: 2
-    .show_more
-      order: 3
-      margin: auto
-      margin-top: 32px
-      
+  .under-title
+    width: 81%
+
+  .primary-text
+    padding-left: 72px
+    &:before
+      top: 24px
+      left: 24px
 
   .block-title
+    padding-left: 13px
+    padding-right: 13px
     margin-bottom: 32px
+    line-height: 42px
+
+  .key-findings__pic 
+    position: absolute
+
+  .key-findings__list
+    li:first-child
+      margin-left: 128px
+
+  .table-hint
+    right: 17px
+    bottom: 145px
+
+  .overall__hint
+    left: 45.2%
+
+  .countries__item
+    &:after
+      width: 740px
+      left: -25px
+
+  .countries__title
+    font-size: 22px
+    line-height: 30px
+
+  .countries__photo
+    width: 374px
+    height: 200px
+
+  .countries__info
+    width: calc(100% - 398px)
+
+  .flight
+    width: 100%
+
+  .image-wrapper
+    height: 180px
+
+  .argentina
+    img
+      top: -30%
+
+  .uk
+    img
+      top: -29%
+
+  .china
+    img
+      top: -11%
+
+  .sweden
+    img
+      top: -17%
+
+  .canada
+    img
+      top: -25%
+
+  .japan
+    img
+      top: -23%
+
+  .mexico
+    img
+      top: -25%
+
+  .singapore
+    img
+      top: -12%
+
+  .norway
+    img
+      top: -27%
+
+  .hong-kong
+    img
+      top: -21%
+
+  .iceland
+    img
+      top: -15%
+
+  .south_africa
+    img
+      top: -15%
+
+  .brazil
+    img
+      top: -10%
+
+  .israel
+    img
+      top: -25%
+
+  .south_korea
+    img
+      top: -25%
+
+  .poland
+    img
+      top: -25%
+
+  .chile
+    img
+      top: -25%
+
+  .australia
+    img
+      top: -25%
+
+  .new_zealand
+    img
+      top: -25%
+
+  .czechia
+    img
+      top: -25%
+
+  .countries__table
+    th
+      padding: 0 10px 0 34px
+      position: relative
+      text-align: left
+      height: 50px
+      &:before
+        position: absolute
+        left: 12px
+        top: 16px
+      &:nth-child(2)
+        &:before
+          top: 20px
+
+      &:nth-child(3)
+        &:before
+          top: 20px
+
+      &:nth-child(4)
+        &:before
+          top: 16px
+
+      &:nth-child(5)
+        &:before
+          top: 16px
+
+      &:nth-child(6)
+        &:before
+          top: 16px
+
+  .countries__more-info
+    position: static
+    margin: auto
+
+  .countries__table
+    margin-bottom: 24px
+
+  .overall-pic
+    padding: 105px 25px 25px 25px
+    .block-title
+      font-size: 32px
+      line-height: 42px
+      margin-bottom: 24px
+
+    .primary-text
+      padding: 16px 16px 16px 64px
+      font-size: 13px
+      line-height: 24px
+      &:before
+        left: 16px
+        top: 16px
 
   .related-head
     padding: 0 20px
@@ -314,10 +354,46 @@
     width: 49%
     padding-right: 0px
 
-  .text-box.last
-    padding-top: 25px
+  .text-box--methodology
+    .main-text
+      padding-left: 0
 
+  .brands
+    padding-left: 0
 
+  .x-rates
+    width: 92px
+    height: 19px
+
+  .kiwi
+    width: 70px
+    height: 35px
+
+  .numbeo
+    width: 95px
+    height: 30px
+
+  .pintprice
+    width: 130px
+    height: 25px
+
+  .hotels
+    width: 95px
+    height: 30px
+
+  .countries__tables-block
+    max-height: 9999px
+
+  .text-box--country
+    .countries__head
+      display: flex
+      flex-direction: row
+      align-items: flex-start
+    .countries__head-text
+      width: 60%
+
+  .table-wrapper
+    width: 100%
 
 @media (min-width: 759px)
   .row6
@@ -334,13 +410,21 @@
 
   .row10
     background-color: #F0FBFE
-  
+
   .mobile-only-close
     display: none
-       
+
   .mobile-only-show
     display: none
-    
+
+  .table-hint
+    display: none
+    &:before
+      display: none
+
+  .icon-hint:hover + .table-hint--closed
+    display: block
+
  .ranking-table.show
   padding-top: 20px
   margin-right: 15px
@@ -360,16 +444,17 @@
   .mobile-only-close
     display: block
 
-
-
 @media (max-width: 759px)
   .content
     margin-left: 10px
     margin-right: 10px
 
+  .table-hint--closed
+    display: none
+
   .top-logo
     display: none
-    
+
   .mob-logo
     display: block
     width: 35px
@@ -385,224 +470,151 @@
     overflow: hidden
     text-overflow: ellipsis
 
-  .article-title
-    font-size: 22px
-    line-height: 30px
-    font-weight: 600
+  .text-box--upper
+    padding: 24px 12px 32px 12px
 
-  .article-text__item
-    min-width: 265px
-    width: auto
-    font-size: 16px
-    line-height: 24px
-    font-weight: 300
-    margin-bottom: 12px
-    
-  .article-author
-    font-size: 12px
-    line-height: 16px
-    font-weight: 300
+  .text-box--countries
+    padding: 32px 12px 32px 12px
+
+  .article-title
+    font-size: 21px
+    line-height: 32px
+    font-weight: 600
+    margin-bottom: 16px
 
   .main-pic
     height: 345px
-    padding: 16px 12px 16px 12px
+    padding: 12px 12px 16px 12px
     background-position: 27% 10%
-    background-image url("images/main_pic_320@2x.png")
-  
+    background-image url("images/main_pic.png")
+
   .main-pic__mask
     height: 170px
 
   .text-box
-    padding: 32px 12px 32px 12px
+    padding: 24px 12px 32px 12px
+    overflow: hidden
     &--upper
       justify-content: center
       .upper-pic
         margin-bottom: 32px
       .under-title
         width: 100%
-      
+
       .under-title
         font-size: 16px
         line-height: 28px
         font-weight: 200
-        
+
       .main-text
         font-size: 14px
         line-height: 24px
         font-weight: 300
 
-  .calendar
-    &__img
-      img
-        width: 276px
-      
-  .ontime-rank
-    box-sizing: border-box
-    .table
-      width: 100%
-      &__head
-        text-align: left
-        font-size: 12px
-        line-height: 20px
-        top: 15px
-        left: 100px
-    
-      table
-        tbody
-          display: flex
-          flex-direction: column
-          flex-wrap: wrap
-          tr
-            width: 100%
-            display: flex
-            flex-direction: row
-            td
-              padding-top: 14px
-              &:first-child
-                width: 10%
-                padding-left: 10px
-
-              &:nth-child(2)
-                width: 80%
-                padding-left: 8px
-                padding-top: 16px
-
-              &:nth-child(3)
-                width: auto
-                padding-top: 10px
-                padding-left: 0
-                padding-right: 14px
-                
-          .row1
-            order: 1
-        
-          .row2
-            order: 2
-          
-          .row3
-            order: 3
-          
-          .row4
-            order: 4
-          
-          .row5
-            order: 5
-          
-          .row6
-            order: 6
-            background-color: $color_white
-          
-          .row7
-            order: 7
-            background-color: #F0FBFE
-          
-          .row8
-            order: 8
-            background-color: $color_white
-          
-          .row9
-            order: 9
-            background-color: #F0FBFE
-            
-          .row10
-            order: 10
-            background-color: $color_white
-            td
-              &:first-child
-                padding-left: 8px
-  
-  .busiest-rank
-    .table
-      width: 100%
-      
-    table
-      th
-        border-right: none
-        &:first-child
-          text-align: center
-          padding-left: 8px
-          padding-right: 0
-          
-        &:nth-child(2)
-          padding-right: 0
-          padding-left: 6px
-          
-        &:nth-child(3)
-          display: none
-          
-        &:last-child
-          padding-left: 0
-          padding-right: 0
-          text-align: center
-          
-      td
-        &:first-child
-          width: 5%
-          padding-left: 2px
-          padding-right: 0
-
-        &:nth-child(2)
-          padding-left: 6px
-
-        &:nth-child(3)
-          display: none
-          
-        &:last-child
-          width: 10%
-          padding-left: 0
-          padding-right: 0
-          
-  .change-rank
+  .key-findings
     flex-direction: column
-    &__table
-      width: 100%
-      .change-table
+    li:first-child
+      margin-left: 0
+
+  .text-box--key-findings
+    position: relative
+    padding-top: 144px
+
+  .key-findings__pic
+    top: 24px
+    left: 50%
+    transform: translateX(-50%)
+
+  .flight
+    padding: 12px
+    &:before
+      left: 12px
+      top: 16px
+
+    table
+      tbody
+        display: flex
+        flex-direction: column
+    tr
+      display: flex
+      flex-direction: column
+    th
+      text-align: left
+      margin-bottom: 36px
+      &:first-child
+        padding-left: 28px
+      &:nth-child(2)
+        margin-bottom: 24px
+    td
+      text-align: left
+      position: absolute
+      &:first-child
+        top: 32px
+        left: 12px
+      &:nth-child(2)
+        top: 95px
+        left: 12px
+
+  .countries__table
+    table
+      display: flex
+      flex-direction: row
+      justify-content: space-between
+    thead
+      width: 60%
+      tr
+        display: flex
+        flex-direction: column
+        flex-wrap: wrap
         th
-          text-align: left
-          font-size: 10px
-          padding-left: 10px
-          padding-right: 0
-          border-right: none
-          &:first-child
-            padding-left: 14px
-
-          &:nth-child(2)
-            padding-left: 0 
-            padding-right: 8px
-            text-align: center   
-
+          width: 100%
+          height: 48px
+          padding-top: 16px
+          box-sizing: border-box
+          &:nth-child(odd)
+            background-color: #EFF3FE
+          &:nth-child(even)
+            background-color: #FFFFFF
+    tbody
+      width: 40%
+      tr
+        display: flex
+        flex-direction: column
+        height: 100%
         td
-          &:first-child
-            width: 70%
-            padding-right: 0
-            padding-left: 14px
-
-          &:nth-child(2)
-            width: auto
+          width: 100%
+          height: 48px
+          box-sizing: border-box
+          &:last-child
             padding-left: 12px
-            padding-right: 12px
+          &:nth-child(odd)
+            background-color: #EFF3FE
+          &:nth-child(even)
+            background-color: #FFFFFF
 
-  .growth
+  .countries__item:after 
+    width: calc(100% + 24px)
+    left: -12px
+
+  .info-hint
+    left: 50%
+    transform: translateX(-50%)
+
+  .table-hint
+    right: 0
+    width: 238px
+    bottom: 138px
+    padding: 12px 18px 12px 14px
+    &:after
+      display: none
+
+  .countries__item
+    padding-bottom: 38px
     margin-bottom: 32px
 
-  .ontime-best-rank
-    .table
-      width: 100%
-      &__head
-        top: 12px
-        font-size: 12px
-        line-height: 20px
-    .small__table
-      tbody  
-        td
-          padding-left: 10px
-          &:first-child
-            padding-left: 10px
-            
-          &:last-child
-            padding-left: 0
-            padding-right: 14px        
-          
+  .countries__item--last
+    .table-hint
+      bottom: 100px
 
   .show_more
     display: flex
@@ -618,7 +630,6 @@
     &:after
       display: none
 
-
   .primary-title
     font-size: 20px
     padding-bottom: 22px
@@ -633,11 +644,93 @@
   .block-title
     font-size 26px
     line-height: 34px
+    padding: 0
+    margin-bottom: 24px
 
-  .main-article--table
+  .primary-text
+    padding: 16px 14px 16px 14px
+    font-size: 14px
+    margin-bottom: 32px
+    &:before
+      position: static
+      float: left
+      margin-right: 10px
+      margin-top: 4px
+
+  .countries__info
+    width: 100%
+
+  .countries__photo
+    position:  absolute
+    top: 47px
+    width: 100%
+    height: 240px
+
+  .image-wrapper
+    height: 220px
+    img
+      min-width: 100%
+      min-height: 100%
+      height: auto
+
+  .countries__head
+    padding-left: 10px
+    margin-bottom: 270px
+
+  .overall-pic
+    height: 364px
+    padding: 44px 10px 16px 10px
+    background-position: 20% 0
     .block-title
-      font-size 26px
-      line-height: 34px
+      font-size: 22px
+      line-height: 32px
+      margin-bottom: 16px
+    .primary-text
+      padding: 15px
+      font-size: 12px
+
+  .overall-pic__mask
+    height: 364px
+
+  .overall__hint
+    display: none
+
+  .text-box--methodology
+    padding-top: 124px
+
+  .uk-stats
+    margin-right: 4px
+
+  .methodology__link
+    margin-left: 0
+
+  .methodology__img
+    top: 36px
+    left: 50%
+    transform: translateX(-50%)
+
+  .x-rates
+    width: 83px
+    height: 17px
+    margin-bottom: 24px
+
+  .kiwi
+    width: 63px
+    height: 32px
+    margin-bottom: 24px
+
+  .numbeo
+    width: 86px
+    height: 29px
+    margin-bottom: 24px
+
+  .pintprice
+    width: 118px
+    height: 23px
+
+  .hotels
+    width: 118px
+    height: 23px
 
   .related-list
     padding-top: 19px
@@ -709,58 +802,13 @@
     .icon
       margin-right: 8px
 
-  .colorful
-    display block
-    .breadcrumbs__item
-      display inline-block
-
   .only_mob-crop
     width: 100px
     overflow: hidden
     white-space: nowrap
     display: inherit
     text-overflow: ellipsis
-    vertical-align: top
-
-  .main-article--table
-    .breadcrumbs__item
-      &:nth-child(3)
-        overflow: hidden
-        min-width: 90px
-      
-  .table
-    display: flex
-    flex-direction: row
-    flex-wrap: wrap
-    justify-content: flex-start
-    align-items: center
-    padding: 0 2px 2px
-  
-    &:before
-      position: static
-      margin-left: 16px
-      margin-right: 16px
-        
-    &__head
-      width: 60%
-      position: static
-      font-size: inherit
-      min-height: 64px
-      display: flex
-      align-items: center
-    
-    .small__table
-      width: 100%
-      
-  .ontime-rank
-    .table
-      &:before
-        margin-top: auto
-        
-  .busiest-rank
-    .table
-      &:before
-        margin-top: auto
+    vertical-align: top     
     
   .mobile-table
     width: 100%
@@ -789,27 +837,224 @@
     .icon
       margin-right: 8px
     
-  .ranking-table
-    .full-table
-      display: none
+  .table-overall
+    display: none
     .mobile-only-show
       display: block
 
-  .ranking-table.show
+  .table-overall__wrap.show
     padding-top: 20px
     margin-right: 15px
     margin-left: 15px
     margin-top: 45px
-    .primary-text
-      display: none
-    .block-title
-      font-size: 24px
-      font-weight: 600
-    .full-table
+    table
+      min-width: 380px
       display: table
       width: 100%
-      overflow scroll
+      overflow: scroll
     .mobile-only-show
       display: none
     .mobile-only-close
       display: block
+
+  .table_sort
+    &:before,
+    &:after
+      right: 10px
+
+  .argentina
+    img
+      top: -5%
+
+  .uk
+    img
+      top: -15%
+
+  .china
+    img
+      top: -5%
+
+  .sweden
+    img
+      top: -5%
+
+  .canada
+    img
+      top: -10%
+
+  .japan
+    img
+      top: -15%
+
+  .mexico
+    img
+      top: -15%
+
+  .singapore
+    img
+      top: -10%
+
+  .norway
+    img
+      top: 0
+
+  .hong-kong
+    img
+      top: -15%
+
+  .iceland
+    img
+      top: -5%
+
+  .south_africa
+    img
+      top: -5%
+
+  .brazil
+    img
+      top: 0
+
+  .israel
+    img
+      top: -10%
+
+  .south_korea
+    img
+      top: -10%
+
+  .poland
+    img
+      top: -10%
+
+  .chile
+    img
+      top: -10%
+
+  .australia
+    img
+      top: -10%
+
+  .new_zealand
+    img
+      top: -10%
+
+  .czechia
+    img
+      top: -10%
+
+  .text-box--country
+    .breadcrumbs__wrap
+      margin-bottom: 28px
+
+    .countries__photo
+      top: 50px
+
+  .detailed-table
+    th
+      padding-left: 16px
+      padding-right: 10px
+    td
+      padding-left: 16px
+      padding-right: 10px
+
+
+@media (max-width: 450px)
+
+  .countries__photo
+    position:  absolute
+    top: 47px
+    width: 100%
+    height: 180px
+
+  .text-box--country
+    .countries__photo
+      top: 70px
+
+  .image-wrapper
+    height: 160px
+    img
+      min-width: 100%
+      min-height: 100%
+      height: auto
+
+  .countries__head
+    padding-left: 10px
+    margin-bottom: 210px
+
+  .argentina
+    img
+      top: 0
+
+  .uk
+    img
+      top: 0
+
+  .china
+    img
+      top: 0
+
+  .sweden
+    img
+      top: 0
+
+  .canada
+    img
+      top: 0
+
+  .japan
+    img
+      top: 0
+
+  .mexico
+    img
+      top: 0
+
+  .singapore
+    img
+      top: 0
+
+  .norway
+    img
+      top: 0
+
+  .hong-kong
+    img
+      top: 0
+
+  .iceland
+    img
+      top: 0
+  .south_africa
+    img
+      top: 0
+
+  .brazil
+    img
+      top: 0
+
+  .israel
+    img
+      top: 0
+  .south_korea
+    img
+      top: 0
+
+  .poland
+    img
+      top: 0
+
+  .chile
+    img
+      top: 0
+
+  .australia
+    img
+      top: 0
+
+  .new_zealand
+    img
+      top: 0
+
+  .czechia
+    img
+      top: 0

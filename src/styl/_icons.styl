@@ -40,16 +40,6 @@
   height: 20px
   width: 24px
 
-.icon-next:before
-  background-image: url(images/svg/icon-next.svg)
-  height: 20px
-  width: 20px
-
-.icon-next_white:before
-  background-image: url(images/svg/icon-next_white.svg)
-  height: 20px
-  width: 20px
-
 .icon-close:before
   background-image: url(images/svg/icon-close.svg)
   height: 12px
@@ -65,4 +55,83 @@
   height: 16px
   width: 16px
 
+.icon-hint
+  &:before
+    position: relative
+    background-image: url(images/icons/icon-hint.svg)
+    height: 16px
+    width: 16px
+    margin-left: 6px
+    margin-right: 8px
+    top: -1px
+    cursor: pointer
 
+.icon-hint
+  &:hover
+    &:before
+      background-image: url(images/icons/icon-hint-blue.svg)
+
+.icon-show:before
+  position: relative
+  background-image: url(images/icons/icon-show.svg)
+  height: 20px
+  width: 20px
+  margin-left: 6px
+  top: -2px
+
+.text-icon
+  position: relative
+  padding-left: 12px
+  font-weight: 600
+  &:before
+    content: ''
+    display: inline-block
+    position: relative
+    left: -7px
+    top: 2px
+    width: 14px
+    height: 14px
+    background-repeat: no-repeat
+    background-size: contain
+
+.icon-dining
+  &:before
+    background-image: url(images/icons/dining.svg)
+
+.icon-groceries
+  &:before
+    width: 16px
+    height: 10px
+    background-image: url(images/icons/groceries.svg)
+    top: 0
+
+.icon-transit
+  &:before
+    height: 12px
+    background-image: url(images/icons/transit.svg)
+    top: 0
+
+.icon-recreation
+  &:before
+    background-image: url(images/icons/recreation.svg)
+    top: 0
+
+.icon-shopping
+  &:before
+    width: 16px
+    height: 16px
+    background-image: url(images/icons/shopping.svg)
+
+.icon-hotels
+  &:before
+    width: 12px
+    height: 16px
+    background-image: url(images/icons/hotels.svg)
+
+.icon-flights
+  &:before
+    width: 16px
+    background-image: url(images/icons/flights.svg)
+
+.dining-tbl
+  background-image: url(images/icons/dining_table.svg)

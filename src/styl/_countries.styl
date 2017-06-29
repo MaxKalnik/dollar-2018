@@ -1,0 +1,149 @@
+@import "_variable.styl"
+
+.text-box--country
+  border-radius: 5px
+  padding-top: 15px
+  margin-bottom: 200px
+  .breadcrumbs__wrap
+    margin-bottom: 44px
+    
+  .breadcrumbs__item
+    &:nth-child(3)
+      min-width: 130px
+      overflow: hidden
+
+  .countries__item
+    margin-bottom: 0
+    padding-bottom: 0
+    &:after
+      display: none
+
+  .breadcrumbs
+    &__wrap
+      box-shadow: none
+      margin-bottom: 44px
+      padding: 0
+
+.countries__head-text
+  display: inline-block
+  font-size: 14px
+  line-height: 26px
+  font-weight: 500
+  color: #3D454C
+
+.countries__tables-block
+  width: 100%
+  display: flex
+  flex-wrap: wrap
+  flex-direction: column
+  align-content: space-between
+  max-height: 950px
+  margin-bottom: 28px
+
+.countries__link
+  position: relative
+  padding-left: 15px
+  margin-bottom: 24px
+  font-size: 14px
+  line-height: 24px
+  font-style: italic
+  font-weight: 100
+  color: #859BA6
+  .reg
+    position: absolute
+    top: 8px
+    left: 0
+  a
+    color: #0CA6F2
+    border-bottom: 1px solid #C1E7FA
+    &:hover
+      border-bottom: none
+
+.table-wrapper
+  width: calc(50% - 30px)
+  border: 1px solid #D2DFFD
+  border-radius: 5px
+  margin-bottom: 16px
+
+.detailed-table
+  position: relative
+  width: 100%
+  border-collapse: collapse
+  th
+    background-color: #EFF3FE
+    padding: 17px 30px 17px 30px
+    font-size: 14px
+    line-height: 16px
+    text-transform: uppercase
+    font-weight: 600
+    &:first-child
+      width: 80%
+      text-align: left
+      font-size: 12px
+      font-weight: 700
+      color: #6B81B3
+      border-right: 1px solid #ffffff
+      &:before
+        content: ''
+        display: inline-block
+        position: relative
+        top: 2px
+        width: 14px
+        height: 14px
+        margin-right: 12px
+        background-repeat: no-repeat
+
+  td
+    padding: 17px 30px 17px 30px
+    font-size: 14px
+    line-height: 16px
+    &:nth-child(2)
+      text-align: center
+
+  tr:nth-child(even)
+    background-color: #F7F9FE
+
+.drinks-table
+  th:first-child
+    &:before
+      background-image: url(images/icons/dining_table.svg)
+
+.groceries-table
+  th:first-child
+    &:before
+      width: 16px
+      height: 10px
+      top: 0
+      background-image: url(images/icons/groceries_table.svg)
+
+.transit-table
+  th:first-child
+    &:before
+      width: 16px
+      height: 16px
+      top: 4px
+      background-image: url(images/icons/transit_table.svg)
+
+.recreation-table
+  th:first-child
+    &:before
+      width: 16px
+      height: 16px
+      top: 4px
+      background-image: url(images/icons/recreation_table.svg)
+
+.shopping-table
+  th:first-child
+    &:before
+      width: 16px
+      height: 16px
+      top: 2px
+      background-image: url(images/icons/shopping_table.svg)
+
+.accomodation-table
+  th:first-child
+    &:before
+      width: 16px
+      height: 16px
+      top: 2px
+      background-image: url(images/icons/accomodation_table.svg)
