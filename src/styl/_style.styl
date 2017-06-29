@@ -151,6 +151,12 @@ b
   flex-direction: row
   flex-wrap: wrap
 
+  .main-text
+    margin-bottom: 26px
+    &:last-child
+      margin-bottom: 0
+
+
 .upper-pic
 	img
 		width: 96px
@@ -544,7 +550,7 @@ b
 .table-hint
   position: absolute
   width: 310px
-  right: 58px
+  right: 64px
   bottom: 92px
   padding: 12px 12px 12px 14px
   font-size: 12px
@@ -820,3 +826,8 @@ b
 
   .mobile-only-show
     display: none
+
+.dlr-sign
+  &:before
+    content:'$'
+    display: inline-block
