@@ -109,6 +109,10 @@
       display: flex
     tbody
       width: 100%
+    th
+      display: flex
+    td
+      display: flex
     tr
       display: flex
       flex-direction: row
@@ -555,16 +559,17 @@
       margin-bottom: 36px
       &:first-child
         padding-left: 28px
+        height: 48px
       &:nth-child(2)
         margin-bottom: 24px
     td
       text-align: left
       position: absolute
       &:first-child
-        top: 32px
+        top: 52px
         left: 12px
       &:nth-child(2)
-        top: 95px
+        top: 115px
         left: 12px
 
   .countries__table
@@ -651,7 +656,7 @@
     flex-wrap wrap
 
   .bottom-col
-    width: 100% 
+    width: 100%
 
   .block-title
     font-size 26px
@@ -820,8 +825,8 @@
     white-space: nowrap
     display: inherit
     text-overflow: ellipsis
-    vertical-align: top     
-    
+    vertical-align: top
+
   .mobile-table
     width: 100%
     margin-bottom: 16px
@@ -848,7 +853,7 @@
     right: 25px
     .icon
       margin-right: 8px
-    
+
   .table-overall
     display: none
     .mobile-only-show

@@ -12,21 +12,21 @@ $(document).ready(function () {
 
     });
 
-    body.on('click', '.js-table', function () {
-        body.append($('.table-overall__wrap'));
+    body.on('click', '.js-table', function(){
+        event.preventDefault();
+        body.append($('.ranking-table'));
+        $('.ranking-table').addClass('show');
         body.scrollTop(0);
         $('.page__wrap').hide();
-        $('.table-overall__wrap').addClass('show');
 
         return false
+
     });
 
     body.on('click', '.mobile-only-close', function () {
-        $('.article-table').removeClass('show');
-        $('.js-before_table').after($('.article-table'));
+        $('.ranking-table').removeClass('show');
+        $('.js-before_table').after($('.ranking-table'));
         $('.page__wrap').show();
-        var top = $('.table-short').position().top;
-        body.scrollTop(top);
         return false
 
     });
