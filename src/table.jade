@@ -1,0 +1,51 @@
+doctype html
+html
+  head
+    meta(charset="utf-8")
+    meta(name="viewport", content="width=device-width, initial-scale=1.0")
+    link(inline="", rel="stylesheet", type="text/css", href="style.min.css")
+    title Exhange Rate Data Table
+  body
+    .page__wrap
+      header.page-header
+        .content
+          a.logo__link(href="/")
+            img.top-logo(inline="", src="images/svg/top-logo.svg", alt="")
+            img.mob-logo(inline="", src="images/svg/top-logo_small.svg", alt="")
+          .top-menu__wrap
+            a.top-menu__link(href="/") home
+            a.top-menu__link.active(href="/blog") blog
+            a.top-menu__link(href="/about") about us
+            a.top-menu__link(href="/contacts") contact us
+          .top-sub_menu__wrap
+            a.button.button-main(href="/new#sign_in") log in
+            a.button.button-register(href="/new#sign_up")
+              i.icon.icon-register
+              | register
+
+      article.main-article
+        .content
+          include ./partials/full-table.jade
+
+      footer.page-footer
+        .content
+          p.footer-text © 2017 RewardExpert.com, Inc. All Rights Reserved
+          .footer-menu__wrap
+            a.footer-menu__link(href="/press") press
+            a.footer-menu__link(href="/blog") blog
+            a.footer-menu__link(href="/contacts") Contact us
+            a.footer-menu__link(href="/terms") terms of use
+            a.footer-menu__link(href="/policy") privacy policy
+            a.footer-menu__link(href="/sitemap") site map
+
+          .footer-soc__wrap
+            a.footer-soc__link(href="https://www.facebook.com/rewardexpert", target="_blank")
+              i.icon.icon-fb
+
+            a.footer-soc__link(href="https://twitter.com/RewardExpert", target="_blank")
+              i.icon.icon-twitter
+
+            a.footer-soc__link(href="https://plus.google.com/u/0/+RewardexpertOfficial/posts", target="_blank")
+              i.icon.icon-google
+
+    script(inline="", src="js/script.min.js")

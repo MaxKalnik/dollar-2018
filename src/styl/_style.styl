@@ -1,5 +1,27 @@
 @import "_variable.styl"
 
+$xxsmall = 321px
+$xsmall = 780px
+$small = 1020px
+$medium = 1440px
+$large = 1850px
+
+respond-to($media)
+  @media only screen and (max-width: $media - 1px)
+    {block}
+
+respond-from($media)
+  @media only screen and (min-width: $media)
+    {block}
+
+respond-to-retina
+  @media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min--moz-device-pixel-ratio: 2), only screen and (-o-min-device-pixel-ratio: 2/1), only screen and (min-device-pixel-ratio: 2)
+    {block}
+
+respond-to-retina-one
+  @media (-webkit-min-device-pixel-ratio: 2),( min--moz-device-pixel-ratio: 2),(-o-min-device-pixel-ratio: 2/1), (min-device-pixel-ratio: 2),(min-resolution: 192dpi), (min-resolution: 2dppx)
+    {block}
+
 body
   font-family: Whitney SSm A, sans-serif
 
@@ -14,7 +36,7 @@ body
 
 .main-text
   font-size: 14px
-  color: $text_color
+  color: #0A0C0D
   letter-spacing: -0.1px
   line-height: 26px
   font-weight 400
@@ -30,6 +52,42 @@ b
   font-weight 600
 .main-article
 	padding-top: 32px
+
+.main-text--countries-upper
+  margin-bottom 32px
+
+.main-block__text-item
+  color: #ffffff
+  font-size: 24px
+  line-height: 32px
+  font-weight: 300
+  margin-bottom: 36px
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.4)
+
+  +respond-from($large)
+    margin-bottom: 28px
+
+  +respond-to($medium)
+    font-size: 24px
+    line-height: 30px
+    font-weight: 300
+    margin-bottom: 46px
+
+  +respond-to($small)
+    width: 650px
+    font-size: 22px
+    line-height: 32px
+    font-weight: 300
+    margin-bottom: 36px
+
+  +respond-to($xsmall)
+    min-width: 265px
+    width: auto
+    font-size: 16px
+    line-height: 24px
+    font-weight: 300
+    margin-bottom: 12px
+
 
 .page__wrap
   background-image: url(images/footer_bg.png), url(images/svg/clouds_bg.svg), url(images/svg/clouds_bg.svg), linear-gradient(-180deg, #34C4F0 0%, #1C90E2 100%)
@@ -52,15 +110,80 @@ b
   position: relative
   background-image: url('images/main_pic.png')
 
+
+.main-text--cards-with-icon
+  position: relative
+  padding-left 128px
+
+  +respond-to($xsmall)
+    padding-left 0
+    padding-top 128px
+
+  &:before
+    position absolute
+    content ''
+    width 96px
+    height 96px
+    left 0
+    top 0
+    background url('images/svg/cards-upper.svg') center no-repeat
+    background-size cover
+
+    +respond-to($xsmall)
+      top 0
+      left 50%
+      transform translateX(-50%)
+
+.text-box--cards
+  .main-text
+    margin-bottom 24px
+    &:last-child
+      margin-bottom 0
+
+.cards__item
+  margin-bottom 45px
+  &:last-child
+    margin-bottom 0
+
+  +respond-to($xsmall)
+    margin-bottom 32px
+    &:last-child
+      margin-bottom 0
+
+.cards__item-title
+  font-size: 24px
+  line-height 32px
+  color: #0A0C0D
+  text-align: left
+  line-height: 32px
+  margin-bottom 24px
+
+.main-text.main-text--upper-text
+  font-size 18px
+  line-height 32px
+  font-weight 400
+  margin-bottom 45px
+
 .main-pic__mask
   position: absolute
   left: 0
   bottom: 0
   width: 100%
-  height: 200px
-  opacity: 0.63
-  background-image: linear-gradient(-180deg, rgba(0,0,0,0) 3%, rgba(0,0,0,0.9) 100%)
-  z-index: 2
+  height: 568px
+  background-image: linear-gradient(-179deg, rgba(0,0,0,0.00) 2%, rgba(1,4,5,0.21) 35%, #05131A 100%)
+
+  +respond-to($medium)
+    background: linear-gradient(-179deg, rgba(0,0,0,0.00) 2%, rgba(1,4,5,0.21) 35%, #05131A 100%)
+
+  +respond-to($small)
+    height: 368px
+    background: linear-gradient(-179deg, rgba(0,0,0,0.00) 2%, rgba(1,4,5,0.21) 35%, #05131A 100%)
+
+  +respond-to($xsmall)
+    height: 270px
+
+  +respond-to(494px)
+    height: 405px
 
 .article-text
   margin-top: auto
@@ -171,12 +294,6 @@ b
   margin-bottom: 44px
   margin-left: auto
 
-.main-text
-	color: #3D454C
-	font-size: 14px
-	line-height: 24px
-	font-weight: 300
-
 .block-title
   font-size: 32px
   line-height: 40px
@@ -223,7 +340,7 @@ b
   display: flex
   flex-direction: row
   flex-wrap: wrap
-  jusstify-content: space-between
+  justify-content: space-between
   align-items: flex-start
   padding-bottom: 46px
   margin-bottom: 44px
@@ -295,7 +412,7 @@ b
 
 .mexico
   img
-    top: -45%
+    top: -55%
 
 .singapore
   img
@@ -309,9 +426,21 @@ b
   img
     top: -35%
 
+.indonesia
+  img
+    top -45%
+
 .iceland
   img
     top: -35%
+
+.sri-lanka
+  img
+    top: -40%
+
+.switzerland
+  img
+    top: -40%
 
 .south_africa
   img
@@ -341,13 +470,25 @@ b
   img
     top: -45%
 
-.new_zealand
+.new-zealand
   img
     top: -35%
 
-.czechia
+.bulgaria
   img
     top: -25%
+
+.european-union
+  img
+    top: -30%
+
+.botswana
+  img
+    top: -60%
+
+.south-korea
+  img
+    top: -35%
 
 .countries__stats
   display: inline-block
@@ -480,8 +621,8 @@ b
 
     &:nth-child(2)
       &:before
-        top: 6px
-        background-image: url(images/icons/groceries_table.svg)
+        top: 3px
+        background-image: url(images/icons/shopping_table.svg)
 
     &:nth-child(3)
       &:before
@@ -494,13 +635,8 @@ b
 
     &:nth-child(5)
       &:before
-        top: 2px
-        background-image: url(images/icons/shopping_table.svg)
-
-    &:nth-child(6)
-      &:before
-        top: 2px
-        background-image: url(images/icons/accomodation_table.svg)
+        top: 4px
+        background-image: url(images/icons/clothing.svg)
 
   td
     font-size: 14px
@@ -550,7 +686,7 @@ b
 .table-hint
   position: absolute
   width: 310px
-  right: 64px
+  right: 78px
   bottom: 92px
   padding: 12px 12px 12px 14px
   font-size: 12px
@@ -582,6 +718,9 @@ b
     border-left: 6px solid transparent
     border-right: 6px solid transparent
     border-top: 8px solid rgba(20,36,51, 0.9)
+
+  +respond-to($xsmall)
+    padding-right 24px
 
 .overall-pic
   height: 300px
@@ -671,8 +810,13 @@ b
   display: flex
   flex-wrap: wrap
   padding-left: 110px
-  justify-content: space-between
+  justify-content: flex-start
   align-items: center
+
+  img
+    margin-right 44px
+    &:last-child
+      margin-right 0
 
 .x-rates
   width: 116px
@@ -698,7 +842,7 @@ b
   padding-bottom: 0
   margin-bottom: 0
   .table-hint
-    bottom: 48px
+    bottom: 68px
 
 .block-title--methodology
   font-size: 24px
@@ -831,3 +975,185 @@ b
   &:before
     content:'$'
     display: inline-block
+
+.featured-cards
+  display: flex
+  flex-direction: row
+  background: #ffffff
+  padding: 32px
+  margin-bottom: 32px
+  box-shadow: 0 9px 20px 0 rgba(13,93,131,0.10)
+  border-radius: 5px
+
+.featured-cards__img-container
+  width: 309px
+  margin-right: 32px
+
+.featured-cards__content
+  width: calc(100% - 333px)
+
+.featured-cards__content
+  flex-grow: 1
+
+.featured-cards__header-promo
+  font-size: 10px
+  line-height: 16px
+  font-weight: 700
+  color: #a1b9c2
+  text-transform: uppercase
+  margin-bottom: 8px
+
+.featured-cards__header-title
+  font-size: 22px
+  line-height: 32px
+  font-weight: 600
+  color: #3d3126
+  margin-bottom: 24px
+
+.featured-cards__links-list-item
+  position: relative
+  padding-left: 24px
+  &:before
+    content: ''
+    position: absolute
+    left: 0
+    top: 4px
+    width: 24px
+    height: 24px
+    background: url(images/svg/check-mark.svg) center no-repeat
+
+.featured-cards__links
+  display: flex
+  flex-direction: row
+  justify-content: space-between
+
+.featured-cards__links-list
+  display: flex
+  width: 50%
+  flex-wrap: wrap
+  flex-direction: column
+  align-content: space-between
+  list-style none
+
+.featured-cards__links-list-link
+  font-size: 14px
+  line-height: 32px
+  font-weight: 500
+  color: #008fd6
+  border-bottom: 1px solid #a7d8f1
+  &:hover
+    border-bottom: none
+
+button
+  font-family: Whitney SSm A, sans-serif
+
+.btn__container
+  display: flex
+  justify-content: center
+  margin-top 45px
+
+  +respond-to($small)
+    margin-top 32px
+
+  +respond-to($xsmall)
+    margin-top 24px
+    margin: 4px 12px 0 12px
+
+.btn-container.btn-container--under-table
+  margin-top: 32px
+  +respond-from($large)
+    margin-top: 42px
+
+.btn__main-text
+  border-bottom: 1px solid rgba(204, 238, 255, .99)
+  transition: .25s ease-out
+  color: #0CA6F2
+
+.btn__main
+  display: inline-block
+  font-size: 12px
+  line-height: 26px
+  font-weight: 600
+  color: #2020a3
+  text-transform: uppercase
+  border-radius: 5px
+  padding: 14px 24px
+  border: 1px solid #CCEEFF
+  cursor: pointer
+  box-sizing: border-box
+  transition: .25s ease-out
+  background: #ffffff
+
+  &:hover
+    background: #0CA6F2
+    color: #ffffff
+    border: 1px solid #ffffff
+    .btn__main-icon
+      fill: #ffffff
+    .btn__main-text
+      border-bottom: 1px solid #0CA6F2
+      color: #ffffff
+
+  +respond-to($xsmall)
+    width: 100%
+    max-width: 300px
+    display: block
+    padding: 10px 12px
+    font-size: 10px
+    text-align: center
+    margin-top: 12px
+
+.btn__main-icon
+  position: relative
+  top: 5px
+  margin-left: 10px
+  transition: fill .25s ease-out
+  fill: #0CA6F2
+  +respond-to($xsmall)
+    display: none
+
+
+@media (max-width: 1439px)
+  .featured-cards__img-container
+    width: 263px
+
+  .featured-cards__content
+    width: calc(100% - 287px)
+
+@media (max-width: 1019px)
+  .featured-cards__img-container
+    width: 309px
+
+  .featured-cards__content
+    width: calc(100% - 333px)
+
+  .featured-cards
+    align-items: center
+
+  .featured-cards__links
+    flex-direction: column
+
+  .featured-cards__links-list
+    width: 100%
+
+@media (max-width: 779px)
+  .featured-cards__img-container
+    width: 259px
+
+@media (max-width: 779px)
+  .featured-cards
+    flex-direction: column
+    align-items: center
+    padding: 24px
+
+  .featured-cards__img-container
+    margin-right: 0
+    margin-bottom: 24px
+
+  .featured-cards__content
+    width: 100%
+
+  .page-footer .content
+    height: auto
+    justify-content center
+

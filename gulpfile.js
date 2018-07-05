@@ -10,6 +10,7 @@ var gulp = require('gulp'),
     clean = require('gulp-clean'),
     livereload = require('gulp-livereload'),
     browsersync = require('browser-sync'),
+    jade = require('gulp-jade'),
     inlinesource = require('gulp-inline-source');
 
 
@@ -87,6 +88,11 @@ gulp.task('images', function () {
         }));
 });
 
+gulp.task('jade', function(){
+    gulp.src([dev_path.html + '*.jade'])
+      .pipe(jade())
+      .pipe(gulp.dest('./build/'))
+});
 
 gulp.task('copyhtml', function () {
     return gulp.src([dev_path.html + '*.html'])
@@ -122,6 +128,7 @@ gulp.task('clean', function () {
 gulp.task('watch', function () {
     gulp.watch(dev_path.styl + '**/*.styl', ['stylus']);
     gulp.watch([dev_path.img + '**/*'], ['images']);
+    gulp.watch([dev_path.jade + '**/*.jade'], ['jade']);
     gulp.watch([dev_path.html + '*.html'], ['copyhtml']);
     gulp.watch(dev_path.js + '**/*.js', ['js']);
     livereload.listen();
@@ -129,7 +136,7 @@ gulp.task('watch', function () {
 });
 
 gulp.task('default', [
-    'copyhtml','stylus', 'images', 'js', 'browsersync-server', 'watch'
+    'jade', 'copyhtml','stylus', 'images', 'js', 'browsersync-server', 'watch'
 ]);
 
 gulp.task('prod', ['clean', 'copyhtml','stylus', 'images', 'js', 'inlinesource']);

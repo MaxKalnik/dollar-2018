@@ -1,0 +1,111 @@
+include ./table-data
+
+.section.section--table.section--g-table
+  .breadcrumbs__wrap
+    .breadcrumbs__item
+      a.breadcrumbs__link(href='')
+        | Home
+
+    .breadcrumbs__item
+      a.breadcrumbs__link(href='')
+        | Reports
+
+    .breadcrumbs__item
+      a.breadcrumbs__link(href='')
+        | Destinations Where Your Dollar Takes You Further in 2018
+
+    .breadcrumbs__item
+      | Exhange Rate Data Table
+
+  h2.section__title.section__title--table
+    | Exhange Rate Data Table
+
+  .ranking-table__container
+
+    .ranking-table__hint
+      .ranking-table__hint-close-btn
+      p.ranking-table__hint-text
+        | By default cities are sorted
+        br
+        | by alphabet. 
+        span.semibold
+          | You could sort by other parameter.
+
+    .mobile-only
+      table.ranking-table.ranking-table--fixed
+        thead
+          tr
+            th(class='table-sort' data-index='0') Per Day Cost Rank (Low to High)
+
+        tbody
+          each value in values
+            tr
+              td
+                = value.perDayCost
+
+    .ranking-table__wrapper
+      table.ranking-table.ranking-table--data
+        thead
+          tr
+            th(class='table-sort' data-index='0') Per Day Cost Rank (Low to High)
+            th(class='table-sort' data-index='1') Exchange Rate Dollar Strength Change Rank
+            th(class='table-sort' data-index='2') Currency
+            th(class='table-sort' data-index='3') % Change Exchange Rate vs.USD
+            th(class='table-sort' data-index='4') 2018 Exchange Rate
+            th(class='table-sort' data-index='5') Estimated Airfare Round-Trip
+
+        tbody
+          each value in values
+            tr
+              td
+                = value.perDayCost
+
+              td
+                = value.exchangeRate
+
+              td
+                = value.currency
+
+              td
+                = value.changeExchangeRate
+
+              td
+                = value.exchangeRate2
+
+              td
+                = value.estimatedAirfare
+
+
+  .map__user-block.map__user-block--table
+    .map__btn-wrapper.map__btn-wrapper--share
+      button.map__btn.map__btn--share
+        span.map__btn-text
+          | Share
+
+        <svg class='map__btn-icon' width="16" height="16" xmlns="http://www.w3.org/2000/svg"><path d="M12.8 9.6a3.18 3.18 0 0 0-2.4 1.105L6.326 8.669a3.114 3.114 0 0 0 0-1.339L10.4 5.294A3.18 3.18 0 0 0 12.8 6.4c1.764 0 3.2-1.436 3.2-3.2C16 1.435 14.564 0 12.8 0a3.204 3.204 0 0 0-3.2 3.2c0 .23.026.453.074.669L5.6 5.905A3.182 3.182 0 0 0 3.2 4.8 3.204 3.204 0 0 0 0 8c0 1.764 1.436 3.2 3.2 3.2a3.18 3.18 0 0 0 2.4-1.106l4.074 2.036c-.048.217-.074.44-.074.67 0 1.764 1.436 3.2 3.2 3.2 1.764 0 3.2-1.436 3.2-3.2 0-1.764-1.436-3.2-3.2-3.2z" fill-rule="nonzero"/></svg>
+
+      .map__btn-container.map__btn-container--share
+        .map__btn-socials
+          a.map__btn-socials-item.map__btn-socials-item--fb(href="")
+            img.socials-logo(src="images/svg/fb-share.svg")
+
+          a.map__btn-socials-item.map__btn-socials-item--tw(href="")
+            img.socials-logo(src="images/svg/tw-share.svg")
+
+          a.map__btn-socials-item.map__btn-socials-item--go(href="")
+            img.socials-logo(src="images/svg/go-share.svg")
+
+    .map__btn-wrapper.map__btn-wrapper--embed
+      button.map__btn.map__btn--embed
+        span.map__btn-text
+          | Embed
+
+        <svg class='map__btn-icon' width="27" height="16" xmlns="http://www.w3.org/2000/svg"><path d="M25.927 6.14a2.164 2.164 0 0 1 0 3.74l-5.934 3.51a1.396 1.396 0 0 1-1.914-.499 1.405 1.405 0 0 1 .498-1.92l5.02-2.96-5.051-2.968a1.404 1.404 0 0 1 .018-2.429 1.394 1.394 0 0 1 1.398.01l5.965 3.517zm-17-3.01a1.406 1.406 0 0 1-.504 1.92l-5.02 2.96 5.051 2.968c.666.392.889 1.252.498 1.92a1.396 1.396 0 0 1-1.914.498L1.073 9.881a2.164 2.164 0 0 1 0-3.74l5.94-3.51a1.394 1.394 0 0 1 1.914.499zm6.63-3.086a1.406 1.406 0 0 1 1 1.733l-3.405 13.171a1.396 1.396 0 1 1-2.336.649 1.407 1.407 0 0 1-.373-1.353l3.411-13.19a1.394 1.394 0 0 1 1.703-1.01z"  fill-rule="nonzero"/></svg>
+
+      .map__btn-container.map__btn-container--embed
+        .map__btn-embed
+          textarea.map__btn-embed-text#copyTarget(autofocus='', readonly='')
+            | <iframe src="https://www.rewardexpert.com/shared/dollar-2018-table/" width="560px" height="1109px" frameborder="0" scrolling="no"></iframe><div style="width:100%;text-align:right;font-size:14px;color:#0a0c0d;margin-bottom:16px;">Source: <a style="color:#2093cd;" href="https://www.rewardexpert.com/blog/studies/destinations-where-your-dollar-takes-you-further-in-2018/">RewardExpert Blog</a></div>
+
+          button.map__btn-embed-copy#copyButton
+            | copy to clipboard

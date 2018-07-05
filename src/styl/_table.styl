@@ -1,6 +1,28 @@
 @import "_variable.styl"
 
-@import "_variable.styl"
+
+$xxsmall = 321px
+$xsmall = 780px
+$small = 1020px
+$medium = 1440px
+$large = 1850px
+
+respond-to($media)
+  @media only screen and (max-width: $media - 1px)
+    {block}
+
+respond-from($media)
+  @media only screen and (min-width: $media)
+    {block}
+
+respond-to-retina
+  @media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min--moz-device-pixel-ratio: 2), only screen and (-o-min-device-pixel-ratio: 2/1), only screen and (min-device-pixel-ratio: 2)
+    {block}
+
+respond-to-retina-one
+  @media (-webkit-min-device-pixel-ratio: 2),( min--moz-device-pixel-ratio: 2),(-o-min-device-pixel-ratio: 2/1), (min-device-pixel-ratio: 2),(min-resolution: 192dpi), (min-resolution: 2dppx)
+    {block}
+
 .article-table
   position: relative
 .table-overall
@@ -43,8 +65,8 @@
     text-align center
   td:nth-child(1)
     color: #859BA6
-
     font-weight 600
+
   td:nth-child(2)
     padding-left: 18px
     box-sizing: border-box
@@ -56,7 +78,7 @@
       font-weight 600
       color: #575250
   td:nth-child(1)
-    width: 4.4%
+    width: 21%
   td:nth-child(2)
     width: 30.1%
     font-weight: 600
@@ -85,7 +107,7 @@
 .overall__hint
   position: absolute
   width: 180px
-  left: 52.2%
+  right: -83px
   top: -75px
   padding: 12px
   font-size: 12px
@@ -108,6 +130,7 @@
     background-repeat: no-repeat
     background-position: center
     cursor: pointer
+
   &:after
     content: ''
     position: absolute
@@ -181,7 +204,6 @@
   .table_show__wrap
     display: block
 
-
 .table_show__wrap
   display: none
   text-align center
@@ -196,3 +218,319 @@
 
     background-image: linear-gradient(-180deg, rgba(255,255,255,0.4) 0%, rgba(255,255,255,1) 100%)
     content: ''
+
+
+
+
+
+// Ranking table
+
+.ranking-table__container
+  position: relative
+  margin-bottom: 24px
+  border 1px solid #F1FAFF
+  border-radius: 5px
+
+.ranking-table__arrow-icon
+  position: absolute
+  visibility: hidden
+  top: 111px
+  right: 10px
+  +respond-to($medium)
+    visibility: visible
+
+.ranking-table__hint
+  position: absolute
+  top: -75px
+  left: 77px
+  width: 204px
+  box-sizing: border-box
+  padding: 12px
+  background: #ffffff
+  box-shadow: 0 20px 40px 0 rgba(0,0,0,0.10)
+  border-radius: 5px
+  cursor: pointer
+  z-index: 2
+  &:after
+    content: ''
+    position: absolute
+    bottom: -7px
+    left: 50%
+    transform: translate(-50%)
+    width: 0
+    height: 0
+    border-left: 7px solid transparent
+    border-right: 7px solid transparent
+    border-top: 7px solid #ffffff
+
+  +respond-from($large)
+    left: 16px
+
+  +respond-to($medium)
+    left: 9px
+
+  +respond-to($small)
+    left: 9px
+
+  +respond-to($xsmall)
+    left: 10px
+
+.ranking-table__hint-close-btn
+  position: absolute
+  width: 14px
+  height: 14px
+  top: 6px
+  right: 6px
+  cursor: pointer
+  &:before
+    content: ''
+    position: absolute
+    top: 6px
+    left: 0
+    width: 13px
+    height: 2px
+    background: #9b9b9b
+    transform: rotate(45deg)
+
+  &:after
+    content: ''
+    position: absolute
+    top: 6px
+    left: 0
+    width: 13px
+    height: 2px
+    background: #9b9b9b
+    transform: rotate(-45deg)
+
+.ranking-table__hint-text
+  font-size: 12px
+  line-height: 18px
+  font-weight: 300
+
+.ranking-table
+  width: 100%
+  border-collapse: collapse
+  border-radius: 5px
+  border-top: none
+  box-sizing: border-box
+  background-image: linear-gradient(-90deg, #3DC4F7 0%, #229FEF 100%)
+  thead
+    th
+      position: relative
+      height: 46px
+      font-size: 10px
+      line-height: 16px
+      font-weight: bold
+      color: #ffffff
+      text-transform: uppercase
+      text-align: center
+      padding: 0 12px
+      box-sizing: border-box
+      border-right: 1px solid rgba(255, 255, 255, 0.3)
+      user-select: none
+      &:last-child
+        border-right: none
+
+      +respond-to($small)
+        font-size: 9px
+        line-height: 12px
+
+      +respond-to($xsmall)
+        font-size: 8px
+        br
+          display: none
+
+    .table-sort
+      padding-right: 16px
+      +respond-to($small)
+        padding-right: 16px
+
+      +respond-to($xsmall)
+        padding-right: 16px
+
+      cursor: pointer
+      &:before
+        content: ''
+        position: absolute
+        top: calc(50% - 8px)
+        right: 4px
+        width: 0
+        height: 0
+        border-left: 5px solid transparent
+        border-right: 5px solid transparent
+        border-bottom: 6px solid #ffffff
+        opacity: 0.7
+        // +respond-to($small)
+        //   right: 8px
+
+        // +respond-to($xsmall)
+        //   right: 6px
+
+      &:after
+        content: ''
+        position: absolute
+        bottom: calc(50% - 8px)
+        right: 4px
+        width: 0
+        height: 0
+        border-left: 5px solid transparent
+        border-right: 5px solid transparent
+        border-top: 6px solid #ffffff
+        opacity: 0.7
+        // +respond-to($small)
+        //   right: 8px
+
+        // +respond-to($xsmall)
+        //   right: 6px
+
+    .table-sort--top
+      &:before
+        opacity: 1
+
+      &:after
+        opacity: 0.7
+
+    .table-sort--down
+      &:before
+        opacity: 0.7
+
+      &:after
+        opacity: 1
+
+  tbody
+    td
+      width: 14.2%
+      height: 51px
+      font-size: 12px
+      line-height: 16px
+      font-weight: 600
+      color: #0A0C0D
+      padding: 0 12px
+      box-sizing: border-box
+      text-align: center
+
+    tr
+      background: #ffffff
+      &:nth-child(odd)
+        background: #EFF6FF
+      &:last-child
+        border-bottom: none
+        .rate-block
+          background: transparent
+
+.ranking-table.ranking-table--fixed
+  background-image: linear-gradient(-90deg, #229FEF 0%, #229FEF 100%)
+
+.btn-container
+  display: flex
+  justify-content: center
+  margin-top: 24px
+
+.btn-go-back
+  display: inline-block
+  color: #1b109f
+  border-radius: 5px
+  padding: 12px 24px
+  font-size: 12px
+  line-height: 26px
+  font-weight: 600
+  text-transform: uppercase
+  cursor: pointer
+  transition: .25s
+  border: 1px solid rgba(27,16,159,.2)
+  &:hover
+    background: #1b109f
+    color: #ffffff
+    border-color: #ffffff
+
+.mobile-only
+  display: none
+
++respond-to($medium)
+  .section--table
+    margin-bottom: 30px
+    .breadcrumbs__wrap
+      margin-bottom: 30px
+
+    .btn-container
+      margin-top: 24px
+
+  .ranking-table__container
+    display: flex
+    flex-direction: row
+
+  .mobile-only
+    width: 120px
+    display: flex
+    flex-direction: column
+
+  .ranking-table
+    thead
+      th
+        height: 64px
+        padding: 0 8px
+
+    tbody
+      td
+        padding: 0 8px
+
+  .ranking-table.ranking-table--data
+    min-width: 610px
+
+  .ranking-table.ranking-table--fixed
+    width: 120px
+    position: relative
+    border-radius: 5px 0 0 0
+    border-right: none
+    box-shadow: 2px 0 13px 0 rgba(0,0,0,0.16)
+
+    th
+      vertical-align: middle
+
+    thead
+      position: relative
+      &:after
+        content: ''
+        position: absolute
+        width: 1px
+        height: 64px
+        background: rgba(255, 255, 255, 0.3)
+        right: 0
+        top: 0
+
+    td
+      &:first-child
+        width: 2%
+
+  .ranking-table__wrapper
+    width: calc(100% - 120px)
+    overflow-x: scroll
+    padding-left: 0
+    padding-right: 0
+
+  .ranking-table--data
+    border-radius: 0 5px 5px 5px
+    border-left: none
+    thead
+      th
+        &:first-child
+          display: none
+
+    tbody
+      td
+        &:first-child
+          display: none
+
+
++respond-to($small)
+  .section--table
+    .breadcrumbs__wrap
+      white-space: nowrap
+      max-width: 100%
+      box-sizing border-box
+
+.btn-container.btn-container--under-table
+  margin-top: 45px
+  +respond-to($xsmall)
+    margin-top: 32px
+

@@ -149,7 +149,6 @@
     padding: 32px 25px 32px 25px
 
   .main-pic
-    height: 345px
     padding: 25px
     background-image url("images/main_pic.png")
     background-position center
@@ -177,7 +176,7 @@
     margin-bottom: 32px
     line-height: 42px
 
-  .key-findings__pic 
+  .key-findings__pic
     position: absolute
 
   .key-findings__list
@@ -185,8 +184,8 @@
       margin-left: 128px
 
   .table-hint
-    right: 22px
-    bottom: 145px
+    right: 24px
+    bottom: 115px
 
   .overall__hint
     left: 45.2%
@@ -269,10 +268,6 @@
     img
       top: -25%
 
-  .south_korea
-    img
-      top: -25%
-
   .poland
     img
       top: -25%
@@ -285,11 +280,31 @@
     img
       top: -25%
 
-  .new_zealand
+  .czechia
     img
       top: -25%
 
-  .czechia
+  .indonesia
+    img
+      top -25%
+
+  .sri-lanka
+    img
+      top -30%
+
+  .new-zealand
+    img
+      top -20%
+
+  .botswana
+    img
+      top -20%
+
+  .south-korea
+    img
+      top: -25%
+
+  .switzerland
     img
       top: -25%
 
@@ -331,7 +346,7 @@
     margin-bottom: 24px
 
   .overall-pic
-    padding: 105px 25px 25px 25px
+    padding: 55px 25px 25px 25px
     .block-title
       font-size: 32px
       line-height: 42px
@@ -368,13 +383,6 @@
   .bottom-col
     width: 49%
     padding-right: 0px
-
-  .text-box--methodology
-    .main-text
-      padding-left: 0
-
-  .brands
-    padding-left: 0
 
   .x-rates
     width: 92px
@@ -499,13 +507,13 @@
     margin-bottom: 16px
 
   .main-pic
-    height: 345px
+    height: 480px
     padding: 12px 12px 16px 12px
     background-position: 27% 10%
     background-image url("images/main_pic.png")
 
   .main-pic__mask
-    height: 170px
+    height: 400px
 
   .text-box
     padding: 24px 12px 32px 12px
@@ -556,12 +564,11 @@
       flex-direction: column
     th
       text-align: left
-      margin-bottom: 36px
       &:first-child
         padding-left: 28px
         height: 48px
       &:nth-child(2)
-        margin-bottom: 24px
+        padding-left 28px
     td
       text-align: left
       position: absolute
@@ -609,7 +616,7 @@
           &:nth-child(even)
             background-color: #FFFFFF
 
-  .countries__item:after 
+  .countries__item:after
     width: calc(100% + 24px)
     left: -12px
 
@@ -620,7 +627,7 @@
   .table-hint
     right: 0
     width: 238px
-    bottom: 138px
+    bottom: 108px
     padding: 12px 18px 12px 14px
     &:after
       display: none
@@ -628,6 +635,8 @@
   .countries__item
     padding-bottom: 38px
     margin-bottom: 32px
+    &:last-child
+      margin-bottom 0
 
   .countries__item--last
     .table-hint
@@ -785,6 +794,11 @@
     width: 100%
     margin-bottom: 16px
 
+  .brands,
+  .main-text
+    .text-box--methodology &
+      padding-left 0
+
   .methodology-article
     padding-top: 110px
     padding-left: 0
@@ -854,10 +868,75 @@
     .icon
       margin-right: 8px
 
-  .table-overall
+  .mobile-only-show
     display: none
-    .mobile-only-show
-      display: block
+
+  .table-overall
+    width: 100%
+    border-spacing: 0
+    background: #44cdf9
+    background-image: linear-gradient(90deg, #1C97ED 0%, #43CCF8 100%)
+    border-radius: 5px 5px 0 0
+    font-size 13px
+    color: #475359
+    font-weight 600
+
+    th
+      font-size: 10px
+      color: #FFFFFF
+      letter-spacing: 0
+      line-height: 16px
+      text-transform uppercase
+      border-right 1px solid rgba(255, 255, 255, .2)
+      vertical-align middle
+      font-weight 600
+      position: relative
+      padding-right: 20px
+      box-sizing: border-box
+      &:first-child
+        padding-right: 0
+      &:last-child
+        border-right none
+      &:nth-child(2)
+        text-align left
+        padding-left: 12px
+      &.head__title--city
+        border-right-width 0
+
+    thead
+      tr
+        background-color rgba(0, 0, 0, 0) !important
+    th, td
+      height: 50px
+      text-align center
+    td:nth-child(1)
+      color: #859BA6
+      font-weight 600
+      width: 35%
+
+    td:nth-child(2)
+      padding-left: 18px
+      box-sizing: border-box
+      text-align left
+      width: 30.1%
+      font-weight: 600
+      color: #475359
+      padding-left: 12px
+      font-size 12px
+      b
+        font-weight 600
+        color: #575250
+    td:nth-child(3)
+      .countries__stats
+        font-size 12px
+
+    tr:nth-child(even)
+      background-color #F2F6F8
+    tr:nth-child(odd)
+      background-color #fff
+    td
+      color: #76706D
+      border-bottom: 1px solid #e6eef2
 
   .table-overall__wrap.show
     padding-top: 20px
@@ -959,6 +1038,43 @@
     img
       top: -10%
 
+  .indonesia
+    img
+      top: -5%
+
+  .sri-lanka
+    img
+      top: -5%
+
+  .switzerland
+    img
+      top: -5%
+
+  .new-zealand
+    img
+      top: -5%
+
+  .bulgaria
+    img
+      top: -5%
+
+  .european-union
+    img
+      top: -5%
+
+  .botswana,
+  .south-korea
+    img
+      top: -5%
+
+  .mexico,
+  .new-zealand,
+  .sri-lanka,
+  .trinidad-and-tobago,
+  .botswana
+    img
+      top: -35%
+
   .text-box--country
     .breadcrumbs__wrap
       margin-bottom: 28px
@@ -976,6 +1092,9 @@
 
 
 @media (max-width: 450px)
+
+  .countries__title
+    font-size 17px
 
   .countries__photo
     position:  absolute
@@ -1073,5 +1192,13 @@
       top: 0
 
   .czechia
+    img
+      top: 0
+
+  .botswana,
+  .trinidad-and-tobago,
+  .new-zealand,
+  .sri-lanka,
+  .mexico
     img
       top: 0

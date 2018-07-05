@@ -1,5 +1,27 @@
 @import "_variable.styl"
 
+$xxsmall = 321px
+$xsmall = 780px
+$small = 1020px
+$medium = 1440px
+$large = 1850px
+
+respond-to($media)
+  @media only screen and (max-width: $media - 1px)
+    {block}
+
+respond-from($media)
+  @media only screen and (min-width: $media)
+    {block}
+
+respond-to-retina
+  @media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min--moz-device-pixel-ratio: 2), only screen and (-o-min-device-pixel-ratio: 2/1), only screen and (min-device-pixel-ratio: 2)
+    {block}
+
+respond-to-retina-one
+  @media (-webkit-min-device-pixel-ratio: 2),( min--moz-device-pixel-ratio: 2),(-o-min-device-pixel-ratio: 2/1), (min-device-pixel-ratio: 2),(min-resolution: 192dpi), (min-resolution: 2dppx)
+    {block}
+
 .page-header
   height: 60px
   background: #0084c3
@@ -246,3 +268,415 @@
   .footer-soc__wrap
     width: 100%
     text-align center
+
+
+
+// additional
+.section
+  position: relative
+  padding: 64px 45px
+  background-color: #ffffff
+  margin-bottom: 10px
+
+  +respond-from($large)
+    padding: 64px 60px
+
+  +respond-to($medium)
+    padding: 45px
+
+  +respond-to($small)
+    padding: 45px 25px
+
+  +respond-to($xsmall)
+    padding: 30px 12px
+
+.section__title
+  font-size: 32px
+  line-height: 40px
+  margin-bottom: 32px
+  color: #0a0c0d
+  text-align: center
+  font-weight: 600
+
+  +respond-to($small)
+    margin-bottom: 30px
+
+  +respond-to($xsmall)
+    font-size 26px
+    line-height: 34px
+
+userBlock(primaryColor)
+  .map
+    margin: 0
+
+  .map__tap-to-full-size
+    width: 112px
+    margin-left: auto
+    margin-right: auto
+    color: primaryColor
+    font-size: 12px
+    line-height: 16px
+    border-bottom: 1px solid alpha(primaryColor, 0.4)
+    text-transform: uppercase
+    font-weight: 600
+    text-align:center
+    transition: .25s ease-out
+    cursor: pointer
+    display: none
+    &:hover
+      border-bottom: 1px solid alpha(primaryColor, 0)
+
+    +respond-to($small)
+      display: block
+      position: relative
+
+    +respond-to($xsmall)
+      top: 0
+
+  .map__user-block
+    position: relative
+    display: flex
+    flex-direction: row-reverse
+    justify-content: flex-start
+    top: -72px
+
+    +respond-from($large)
+      top: -72px
+
+    +respond-to($medium)
+      justify-content: center
+      top: 0
+      margin-top: 24px
+
+    +respond-to($small)
+      margin-top: 24px
+
+    +respond-to($xsmall)
+      top: 0
+      padding-right: 0
+      margin: 24px 0
+      justify-content: center
+
+  .map__btn-icon
+    position: relative
+    top: 3px
+    margin-left: 8px
+    transition: fill .25s ease-in
+    fill: primaryColor
+
+  .map__btn-icon
+    &:hover
+      fill: #ffffff
+
+  .map__btn-wrapper
+    position: relative
+    margin-left: 32px
+    &:first-child
+      margin-left: 0
+
+    +respond-to($xsmall)
+      margin-left: 24px
+
+  .map__btn-wrapper--share
+    order: 2
+
+  .map__btn
+    position: relative
+    width: 128px
+    height: 58px
+    padding: 16px
+    text-align: center
+    border: 1px solid alpha(primaryColor, 0.2)
+    border-radius: 5px
+    box-sizing: border-box
+    cursor: pointer
+    background-color: #ffffff
+    transition: .25s ease-in
+
+    &:hover
+      background-color: primaryColor
+      border: 1px solid transparent
+
+      .map__btn-text
+        color: #ffffff
+        border-bottom: 1px solid transparent
+
+      .map__btn-icon
+        fill: #ffffff
+
+    &:active
+      background: primaryColor
+      border: 1px solid primaryColor
+
+      .map__btn-text
+        color: #ffffff
+        border-bottom: 1px solid transparent
+
+      .map__btn-icon
+        fill: #ffffff
+
+    +respond-to($xsmall)
+      width: 122px
+      height: 48px
+      padding: 11px
+
+  .map__btn-container--share
+    position: absolute
+    visibility: hidden
+    top: 75px
+    left: -20px
+
+    +respond-to($xsmall)
+      top: 65px
+
+  .map__btn-socials
+    position: relative
+    display: flex
+    padding: 24px
+    border: 1px solid alpha(primaryColor, 0.2)
+    border-radius: 3px
+    background: #ffffff
+    box-shadow: 0 4px 6px 0 rgba(0,0,0,0.10)
+    z-index: 1
+    &:before
+      content: ''
+      position: absolute
+      top: -8px
+      left: 50%
+      transform: translateX(-50%)
+      width: 18px
+      height: 8px
+      background: url(images/svg/triangle.svg)
+      background-size: cover
+      border-bottom: 1px solid #ffffff
+
+  .map__btn-socials-item
+    display: flex
+    justify-content: center
+    align-items: center
+    width: 32px
+    height: 32px
+    border-radius: 50%
+    box-sizing: border-box
+    margin-right: 12px
+
+    &:last-child
+      margin-right: 0
+
+  .map__btn-socials-item--fb
+    border: 1px solid #cdd5e4
+
+    &:hover
+      background: #eaeef4
+
+  .map__btn-socials-item--tw
+    border: 1px solid #cfeaf9
+
+    &:hover
+      background: #e5f3fd
+
+  .map__btn-socials-item--go
+    border: 1px solid #fee4e2
+
+    &:hover
+      background: #feecec
+
+  .map__btn-container--embed
+    position: absolute
+    visibility: hidden
+    top: 75px
+    right: 0
+
+    +respond-to($xsmall)
+      top: 65px
+
+  .map__btn-embed
+    position: relative
+    display: flex
+    flex-direction: column
+    width: 400px
+    padding: 24px
+    background: #ffffff
+    border-radius: 3px
+    border: 1px solid alpha(primaryColor, 0.2)
+    box-shadow: 0 4px 6px 0 rgba(0,0,0,0.10)
+    z-index: 1
+    &:before
+      content: ''
+      position: absolute
+      top: -8px
+      right: 47px
+      transform: translateX(-50%)
+      width: 18px
+      height: 8px
+      background: url(images/svg/triangle.svg)
+      background-size: cover
+      border-bottom: 1px solid #ffffff
+
+    +respond-to($xsmall)
+      width: 226px
+
+  .map__btn-embed-text
+    height: 64px
+    overflow-y: scroll
+    margin-bottom: 16px
+    font-size: 12px
+    line-height: 16px
+    border: 1px solid alpha(primaryColor, 0.2)
+    border-radius: 3px
+    resize: none
+
+  .map__btn-embed-copy
+    width: 156px
+    display: inline-block
+    color: #ffffff
+    text-transform: uppercase
+    font-size: 12px
+    line-height: 16px
+    font-weight: 600
+    padding: 8px 14px 8px 14px
+    outline: none
+    border: none
+    background-color: saturate(primaryColor, 55%)
+    border-radius: 3px
+    cursor: pointer
+    margin: 0 auto
+    &:hover
+      background-color: saturate(primaryColor, 80%)
+    &:active
+      background-color: saturate(primaryColor, 80%)
+
+    +respond-to($xsmall)
+      font-size: 10px
+
+  .map__btn-embed-copy.map__btn-embed-copy--light-blue
+    background: #4080d7
+
+  .map__btn-text
+    font-size: 12px
+    line-height: 26px
+    color: primaryColor
+    font-weight: 600
+    border-bottom: 1px solid alpha(primaryColor, 0.2)
+    text-transform: uppercase
+    transition: .25s ease-in
+    &:hover
+      color: #ffffff
+
+    +respond-to($xsmall)
+      font-size: 10px
+
+  .map-wrapper
+    overlow-x: scroll
+
+  .map__btn-container.visible
+    visibility: visible
+
+  .frame-container
+    display: block
+
+userBlock(#0CA6F2)
+
+.map__user-block.map__user-block--table
+  top: 0
+  justify-content: center
+
+mapBtn(primaryColor)
+  button
+    font-family: Whitney SSm A, sans-serif
+
+  .btn__container
+    display: flex
+    justify-content: center
+    margin-top: 25px
+
+    +respond-to($xsmall)
+      margin: 4px 12px 0 12px
+
+  .btn-container.btn-container--under-table
+    margin-top: 32px
+    +respond-from($large)
+      margin-top: 42px
+
+  .btn__main-text
+    border-bottom: 1px solid alpha(primaryColor, 0.3)
+    transition: .25s ease-out
+    color: primaryColor
+
+  .btn__main-icon
+    position: relative
+    top: 5px
+    margin-left: 10px
+    transition: fill .25s ease-out
+    fill: primaryColor
+    +respond-to($xsmall)
+      display: none
+
+  #btn_icon
+    fill: primaryColor
+    transition: .25s ease-out
+
+  .btn__main
+    display: inline-block
+    font-size: 12px
+    line-height: 26px
+    font-weight: 600
+    text-transform: uppercase
+    border-radius: 5px
+    padding: 14px 24px
+    border: 1px solid alpha(primaryColor, 0.3)
+    cursor: pointer
+    box-sizing: border-box
+    transition: .25s ease-out
+    background: #ffffff
+
+    &:hover
+      background: primaryColor
+      color: #ffffff
+      border: 1px solid #ffffff
+      #btn_icon
+        fill: #ffffff
+      .btn__main-text
+        border-bottom: 1px solid transparent
+        color: #ffffff
+
+    +respond-to($xsmall)
+      width: 100%
+      max-width: 400px
+      display: block
+      padding: 10px 12px
+      font-size: 10px
+      text-align: center
+      margin-top: 12px
+
+.section--table
+  mapBtn(#0CA6F2)
+
+  .breadcrumbs__wrap
+    width: auto
+    margin-bottom: 45px
+    box-shadow: none
+
+  .breadcrumbs__link
+    color: $main-color
+    letter-spacing: 0
+    line-height: 42px
+    text-decoration: underline
+    $ultraThin()
+    &:hover
+      text-decoration none
+      text-decoration-color: #A3DCF0
+
+  .breadcrumbs__item
+    &:nth-child(3),
+    &:nth-child(4),
+    &:last-child
+      overflow: hidden
+      text-overflow: ellipsis
+
+    &:nth-child(3),
+    &:nth-child(4)
+      min-width: 45px
+
+    &:last-child
+      min-width: 75px
