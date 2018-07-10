@@ -170,10 +170,10 @@ b
   bottom: 0
   width: 100%
   height: 568px
-  background-image: linear-gradient(-179deg, rgba(0,0,0,0.00) 2%, rgba(1,4,5,0.21) 35%, #05131A 100%)
+  background-image: linear-gradient(-179deg, rgba(0,0,0,0.00) 2%, rgba(1,4,5,0.21) 15%, #05131A 100%)
 
   +respond-to($medium)
-    background: linear-gradient(-179deg, rgba(0,0,0,0.00) 2%, rgba(1,4,5,0.21) 25%, #05131A 100%)
+    background: linear-gradient(-179deg, rgba(0,0,0,0.00) 2%, rgba(1,4,5,0.21) 15%, #05131A 100%)
 
   +respond-to($small)
     height: 478px
@@ -365,6 +365,14 @@ b
   margin-left: auto
   padding-top: 5px
   margin-bottom: 24px
+
+.countries__text--under
+  width: calc(100% - 464px)
+  margin-left auto
+  margin-bottom: 24px
+
+.countries__text.countries__text--under
+  margin-top 0
 
 .countries__photo
   position: relative
@@ -638,6 +646,11 @@ b
       &:before
         top: 4px
         background-image: url(images/icons/clothing.svg)
+
+    &:nth-child(6)
+      &:before
+        top: 4px
+        background-image: url(images/icons/salary.svg)
 
   td
     font-size: 14px
